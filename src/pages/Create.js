@@ -1,56 +1,39 @@
-import React from 'react'
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import  ButtonGroup  from '@mui/material/ButtonGroup';
-import  Container  from '@mui/material/Container';
-import ArrowForwardIosRoundedIcon from '@mui/icons-material/ArrowForwardIosRounded';
-import { makeStyles } from '@mui/styles';
 
-const useStyle = makeStyles({
-  btn:{
-    fontSize: 60,
-    height:40,
-    backgroundColor: 'violet',
-    '&:hover':{
-      backgroundColor: 'blue'
-    }
-  },
-  title:{
-    textDecoration: 'underline',
-    marginBottom:20
-  }
+import ArrowForwardIosRoundedIcon from '@mui/icons-material/ArrowForwardIosRounded';
+import React from 'react'
+import Typography from '@material-ui/core/Typography'
+import Button from '@material-ui/core/Button'
+import Container from '@material-ui/core/Container'
+import { makeStyles } from '@material-ui/core'
+
+const useStyles = makeStyles({
+
 })
 
 export default function Create() {
-  const classes = useStyle()
+  const classes = useStyles()
+
   return (
-    <Container>
-      <Typography 
-      className={classes.title}
-      variant='h6'
-      color='textSecondary'
-      component='h2'
-      gutterBottom>
-        Create a new Note
+    <Container size="sm">
+      <Typography
+        variant="h6" 
+        color="textSecondary"
+        component="h2"
+        gutterBottom
+      >
+        Create a New Note
       </Typography>
 
-      <Button 
-      className={classes.btn}
-      onClick={()=>{console.log('Hello World')}}
-      type='submit'
-      color='secondary'
-      variant='contained'
-      endIcon={<ArrowForwardIosRoundedIcon  />}>
-         submit</Button>
+      <Button
+        onClick={() => console.log('you clicked me')}
+        type="submit" 
+        color="secondary" 
+        variant="contained"
+        endIcon={<ArrowForwardIosRoundedIcon />}>
+        Submit
+      </Button>
 
-
-
-      {/* // Button Group 
-      <ButtonGroup variant='contained' color='secondary'>
-        <Button>One</Button>
-        <Button>Two</Button>
-        <Button>Three</Button>
-      </ButtonGroup>  */}
+      
     </Container>
   )
 }
