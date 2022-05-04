@@ -1,6 +1,5 @@
-
-import ArrowForwardIosRoundedIcon from '@mui/icons-material/ArrowForwardIosRounded';
 import React, { useState } from 'react'
+import ArrowForwardIosRoundedIcon from '@mui/icons-material/ArrowForwardIosRounded';
 import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
 import Container from '@material-ui/core/Container'
@@ -10,7 +9,6 @@ import { color } from '@mui/system';
 import  Radio  from '@material-ui/core/Radio';
 import  RadioGroup  from '@material-ui/core/RadioGroup';
 import { useHistory } from 'react-router-dom';
-
 
 const useStyles = makeStyles({
   field: {
@@ -105,8 +103,6 @@ export default function Create() {
         Submit
       </Button>
       </form>
-
-
       
     </Container>
   )
