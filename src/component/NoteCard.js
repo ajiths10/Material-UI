@@ -6,16 +6,13 @@ import IconButton from '@material-ui/core/IconButton'
 import Typography from '@material-ui/core/Typography'
 import DeleteOutlined from '@material-ui/icons/DeleteOutlined'
 import { Avatar, makeStyles } from '@material-ui/core'
-import { yellow,red,pink,blue } from '@material-ui/core/colors'
+import { yellow,green,pink,blue } from '@material-ui/core/colors'
 
 const useStyles = makeStyles({
   test: {
     border: (note) =>{
-      if(note. method=== 'gold'){
-        return'1px solid gold'
-      }
       if(note. method=== 'Bitcoin'){
-        return'1px solid red'
+        return'1px solid gold'
       }
     }
   },
@@ -23,10 +20,10 @@ const useStyles = makeStyles({
 avatar: {
   backgroundColor: (note)=> {
   if (note.method=='Bitcoin'){
-    return red[700]
+    return yellow[700]
   }
   if (note.method=='gold'){
-    return yellow[700]
+    return green[200]
   }
   if (note.method=='cash'){
     return pink[200]

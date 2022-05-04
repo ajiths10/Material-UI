@@ -23,6 +23,12 @@
       "details": "new one",
       "method": "Bitcoin",
       "id": 4
+    },
+    {
+      "title": "book",
+      "details": "New comic book",
+      "method": "Bitcoin",
+      "id": 5
     }
   ],
   "text": [

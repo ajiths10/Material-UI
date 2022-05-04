@@ -13,3 +13,6 @@ install JSON server
 //For date formating install
 **npm install date-fns**
  sample= Today is the {format(new Date(),'do MMMM Y')}
+
+ //Formatting install third party pakage for install = 
+ **npm i react-masonry-css** 
