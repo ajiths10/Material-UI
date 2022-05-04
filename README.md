@@ -9,3 +9,7 @@ install JSON server
 
 //To see the JSON server items
 **json-server --watch data/db.json --port 8000**
+
+//For date formating install
+**npm install date-fns**
+ sample= Today is the {format(new Date(),'do MMMM Y')}
