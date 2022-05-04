@@ -11,6 +11,7 @@ import { useHistory, useLocation } from 'react-router-dom';
 import { AppBar } from '@material-ui/core';
 import { Toolbar } from '@material-ui/core';
 import { format } from 'date-fns';
+import { Avatar } from '@material-ui/core';
 
 const drawerWidth = 240;
 
@@ -43,6 +44,10 @@ return{
   toolbar: theme.mixins.toolbar,
   date: {
     flexGrow: 1
+  },
+  avatar: {
+    marginLeft: theme.spacing(2),
+    borderRadius:'.5rem'
   }
 }
 })
@@ -76,6 +81,7 @@ export default function Layout(props) {
           <Typography>
             Kyle
           </Typography>
+          <Avatar src='/avathar.png'  className={classes.avatar}/>
         </Toolbar>
       </AppBar>
       

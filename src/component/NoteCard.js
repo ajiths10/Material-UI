@@ -5,7 +5,8 @@ import CardContent from '@material-ui/core/CardContent'
 import IconButton from '@material-ui/core/IconButton'
 import Typography from '@material-ui/core/Typography'
 import DeleteOutlined from '@material-ui/icons/DeleteOutlined'
-import { makeStyles } from '@material-ui/core'
+import { Avatar, makeStyles } from '@material-ui/core'
+import { yellow,red,pink,blue } from '@material-ui/core/colors'
 
 const useStyles = makeStyles({
   test: {
@@ -17,7 +18,22 @@ const useStyles = makeStyles({
         return'1px solid red'
       }
     }
+  },
+
+avatar: {
+  backgroundColor: (note)=> {
+  if (note.method=='Bitcoin'){
+    return red[700]
   }
+  if (note.method=='gold'){
+    return yellow[700]
+  }
+  if (note.method=='cash'){
+    return pink[200]
+  }
+  return blue[200]
+}
+}
 })
 
 export default function NoteCard({ note, handleDelete }) {
@@ -26,6 +42,11 @@ export default function NoteCard({ note, handleDelete }) {
     <div>
       <Card elevation={1} className={classes.test}>
         <CardHeader
+        avatar={
+          <Avatar className={classes.avatar}>
+            {note.title[0].toUpperCase()}
+            </Avatar>
+        }
           action={
             <IconButton onClick={() => handleDelete(note.id)}>
               <DeleteOutlined />
